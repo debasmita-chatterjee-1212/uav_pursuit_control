@@ -1,8 +1,5 @@
 /*
  * Node: AR_PID.cpp
- * Author: Christopher Surma
- * Maintainer: Martin Barczyk
- * Date: Nov 27/19
  * Description:
  * This node is a PID controller that controls the position and yaw orientation 
  * of the AR.Drone using Vicon data. This code subscribes from the /ar_drone_ros
