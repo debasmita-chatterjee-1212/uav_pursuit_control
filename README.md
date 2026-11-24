@@ -41,7 +41,7 @@ The broader research framework comprises five functional components:
 | Motion control | PID and Linear Model Predictive Control |
 | Flight execution | ROS-based command publication and MAVLink-based flight operations |
 
-The research investigates the integration of perception and control for autonomous UAV pursuit. The repository contains individual implementations and experimental modules rather than a single fully integrated software package.
+The research investigates the integration of perception and control for autonomous UAV pursuit. The repository contains individual implementations and experimental modules rather than a single fully integrated software package. For detailed system architecture, ROS communication interfaces and software architecture diagrams, see [System Architecture Documentation](./docs/system_architecture.md).
 
 ## Technical Implementation
 
