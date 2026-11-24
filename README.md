@@ -229,6 +229,8 @@ These technologies represent the overall research environment. Not all associate
 | `package.xml` | ROS package metadata |
 | `docs/system_architecture.md` | Research architecture, ROS interfaces and MAVSDK architecture diagrams |
 | `docs/implementation_details.md` | Source-code documentation, module functions and communication interfaces |
+| `docs/experimental_setup.md`| Experimental environment and annotation documentation |
+| `docs/experimental_results.md` | Report-derived experimental results |
 
 ## Individual Research Contributions
 
