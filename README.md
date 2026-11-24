@@ -228,6 +228,7 @@ These technologies represent the overall research environment. Not all associate
 | `CMakeLists.txt` | ROS package build configuration |
 | `package.xml` | ROS package metadata |
 | `docs/system_architecture.md` | Research architecture, ROS interfaces and MAVSDK architecture diagrams |
+| `docs/implementation_details.md` | Source-code documentation, module functions and communication interfaces |
 
 ## Individual Research Contributions
 
