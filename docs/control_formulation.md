@@ -67,7 +67,7 @@ The standard quaternion-to-Euler conversion for a normalized quaternion is:
 
 $$
 \phi =
-\operatorname{atan2}
+\mathrm{atan2}
 \left(
 2(q_wq_x+q_yq_z),
 1-2(q_x^2+q_y^2)
@@ -84,7 +84,7 @@ $$
 
 $$
 \psi =
-\operatorname{atan2}
+\mathrm{atan2}
 \left(
 2(q_wq_z+q_xq_y),
 1-2(q_y^2+q_z^2)
@@ -216,17 +216,17 @@ These control outputs are assigned to the translational and yaw components of a 
 The four independent control channels can be represented using diagonal gain matrices:
 
 $$
-K_p=\operatorname{diag}
+K_p=\mathrm{diag}
 (K_{px},K_{py},K_{pz},K_{p\psi})
 $$
 
 $$
-K_i=\operatorname{diag}
+K_i=\mathrm{diag}
 (K_{ix},K_{iy},K_{iz},K_{i\psi})
 $$
 
 $$
-K_d=\operatorname{diag}
+K_d=\mathrm{diag}
 (K_{dx},K_{dy},K_{dz},K_{d\psi})
 $$
 
@@ -349,10 +349,7 @@ $$
 The augmented model becomes:
 
 $$
-\mathbf{z}_{k+1}
-=
-\widetilde{A}\mathbf{z}_k+
-\widetilde{B}\Delta\mathbf{u}_k
+\mathbf{z}_{k+1} = \widetilde{A}\mathbf{z}_k+ \widetilde{B}\Delta\mathbf{u}_k
 $$
 
 where:
@@ -421,14 +418,14 @@ where:
 The archived LMPC implementation uses the following diagonal state-weight matrix:
 
 $$
-Q=\operatorname{diag}
+Q=\mathrm{diag}
 (3.25,3.75,3.25,10,4.25,4.75,1.75,0)
 $$
 
 The control-increment weight matrix is:
 
 $$
-R=\operatorname{diag}(1,1,1,2)
+R=\mathrm{diag}(1,1,1,2)
 $$
 
 The values are retained from the archived implementation.
@@ -438,10 +435,7 @@ The values are retained from the archived implementation.
 The stacked augmented-state prediction can be represented as:
 
 $$
-\mathbf{Z}
-=
-\mathcal{A}\mathbf{z}_k+
-\mathcal{B}\Delta\mathbf{U}
+\mathbf{Z} = \mathcal{A}\mathbf{z}_k + \mathcal{B}\Delta\mathbf{U}
 $$
 
 The implementation constructs block prediction matrices and calculates a predictive control gain using a matrix inverse.
@@ -500,11 +494,7 @@ This matrix selects the four position and yaw components of the state vector.
 A conventional discrete Luenberger observer is expressed as:
 
 $$
-\hat{\mathbf{x}}_{k+1}
-=
-A_d\hat{\mathbf{x}}_k+
-B_d\mathbf{u}_k+
-K_o(\mathbf{y}_k-C_o\hat{\mathbf{x}}_k)
+\hat{\mathbf{x}}_{k+1} = A_d\hat{\mathbf{x}}_k + B_d\mathbf{u}_k + K_o(\mathbf{y}_k-C_o\hat{\mathbf{x}}_k)
 $$
 
 The archived implementation uses an alternative observer-gain sign convention:
@@ -516,11 +506,7 @@ $$
 The corresponding observer update is:
 
 $$
-\hat{\mathbf{x}}_{k+1}
-=
-(A_d+LC_o)\hat{\mathbf{x}}_k+
-B_d\mathbf{u}_k-
-L\mathbf{y}_k
+\hat{\mathbf{x}}_{k+1} = (A_d+LC_o)\hat{\mathbf{x}}_k + B_d\mathbf{u}_k - L\mathbf{y}_k
 $$
 
 This is equivalent to the conventional formulation when:
