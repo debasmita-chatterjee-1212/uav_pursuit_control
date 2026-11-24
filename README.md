@@ -227,7 +227,7 @@ These technologies represent the overall research environment. Not all associate
 | `src/traj.msg` | Trajectory and analysis message definition |
 | `CMakeLists.txt` | ROS package build configuration |
 | `package.xml` | ROS package metadata |
-| [docs/system_architecture.md](./docs/system_architecture.md) | Research architecture, ROS interfaces and MAVSDK architecture diagrams |
+| `docs/system_architecture.md` | Research architecture, ROS interfaces and MAVSDK architecture diagrams |
 
 ## Individual Research Contributions
 
